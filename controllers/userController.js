@@ -58,7 +58,7 @@ exports.submitForm = catchAsync(async (req, res, next) => {
       new AppError(
         `You can submit another request by, ${new Date(
           user?.allowFormSubmitIn
-        ).toLocaleTimeString("en-US", {
+        ).toLocaleTimeString(form?.locale || 'en-US', {
           timeStyle: 'short',
         })}`
       )
@@ -127,4 +127,5 @@ exports.updateFormStatus = catchAsync(async (req, res, next) => {
     message: `status updated succesfully: ${user.form.status}`,
   });
 });
+
 
