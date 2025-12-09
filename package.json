@@ -4,8 +4,7 @@
   "description": "University Exit Form Project",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "start:prod": "cross-env NODE_ENV=production nodemon server.js",
+    "start": "node server.js",
     "debug": "ndb server.js"
   },
   "author": "Innocent Dev",
@@ -37,3 +36,4 @@
     "node": ">=18.0.0"
   }
 }
+
