@@ -46,7 +46,6 @@ exports.getUser = catchAsync(async (req, res, next) => {
 
 exports.submitForm = catchAsync(async (req, res, next) => {
   const form = req.body;
-  console.log(req.user);
   const user = await User.findById(req?.user?.id);
 
   console.log(form);
@@ -127,5 +126,6 @@ exports.updateFormStatus = catchAsync(async (req, res, next) => {
     message: `status updated succesfully: ${user.form.status}`,
   });
 });
+
 
 
