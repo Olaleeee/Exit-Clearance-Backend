@@ -60,6 +60,12 @@ const formSchema = new mongoose.Schema({
     type: String,
     default: '-',
   },
+
+  locale: {
+    type: String,
+    default: 'en-US'
+  }
 });
 
 module.exports = formSchema;
+
